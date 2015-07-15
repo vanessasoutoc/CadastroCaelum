@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<item
+		android:id="@+id/novo"
+		android:icon="@drawable/ic_person_add_white_24dp"
+		android:showAsAction="always"
+		android:title="Novo"/>
+	<item
+		android:id="@+id/mapa"
+		android:icon="@drawable/ic_public_white_24dp"
+		android:showAsAction="always"
+		android:title="Mapa"/>
+	<item
+		android:icon="@drawable/ic_arrow_drop_down_white_36dp"
+		android:showAsAction="always"
+		android:title="Mais Opções">
+		<menu>
+			<item
+				android:id="@+id/enviar_alunos"
+				android:icon="@drawable/ic_file_upload_white_24dp"
+				android:title="Enviar Alunos"/>
+			<item
+				android:id="@+id/receber_alunos"
+				android:icon="@drawable/ic_file_download_white_24dp"
+				android:title="Receber Alunos"/>
+			<item
+				android:id="@+id/preferencias"
+				android:icon="@drawable/ic_build_white_24dp"
+				android:title="Preferências"/>
+		</menu>
+	</item>
+
+</menu>
