@@ -74,4 +74,24 @@ public class AlunoDAO extends SQLiteOpenHelper{
 		return alunos;
 	
 	}
+
+	public void deletar(Aluno aluno) {
+		String[] args = {aluno.getId().toString()};
+		getWritableDatabase().delete("Alunos", "id=?", args);
+	}
+
+
+	public void atualizar(Aluno aluno) {
+		ContentValues cv = new ContentValues();
+		cv.put("id", aluno.getId());
+		cv.put("nome", aluno.getNome());
+		cv.put("telefone", aluno.getTelefone());
+		cv.put("endereco", aluno.getEndereco());
+		cv.put("site", aluno.getSite());
+		cv.put("nota", aluno.getNota());
+		cv.put("caminhoFoto", aluno.getCaminhoImg());
+		
+		String[] args = {aluno.getId().toString()};
+		getWritableDatabase().update("Alunos", cv, "id=?", args);		
+	}
 };
